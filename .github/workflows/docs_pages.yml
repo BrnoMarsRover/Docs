@@ -34,15 +34,15 @@ jobs:
           # sphinx-apidoc -f -o docs/source . -H Test -e -t docs/source/_templates
           make -C docs html
 
-      - name: Init new repo in dist folder and commit generated files
-        run: |
-          cd docs/build/html/
-          git init
-          touch .nojekyll
-          git add -A
-          git config --local user.email "action@github.com"
-          git config --local user.name "GitHub Action"
-          git commit -m 'deploy'
+#      - name: Init new repo in dist folder and commit generated files
+#        run: |
+#          cd docs/build/html/
+#          git init
+#          touch .nojekyll
+#          git add -A
+#          git config --local user.email "action@github.com"
+#          git config --local user.name "GitHub Action"
+#          git commit -m 'deploy'
 
       - name: Publish to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
