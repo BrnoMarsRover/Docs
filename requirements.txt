@@ -2,3 +2,5 @@ sphinx
 sphinx-rtd-theme
 sphinxcontrib-apidoc
 sphinx-autoapi
+myst-parser
+rst2pdf
